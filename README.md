@@ -16,11 +16,11 @@ of SauceDemo website. Reporting is implemented using Mochawesome reporter.
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Urke280/AllWynTest.git
+   git clone https://github.com/Urke280/saucelabs-cypress.git
    ```
 2. Navigate into the project directory:
    ```bash
-   cd cypress-project
+   cd saucelabs-cypress
    ```
 3. Install cypress:
    ```bash
