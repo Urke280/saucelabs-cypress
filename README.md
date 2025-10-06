@@ -49,8 +49,8 @@ cypress-project/
 ├── cypress.config.js
 ├── package.json
 ├── package-lock.json
-├── DockerFile
-├── JenkinsFile
+├── Dockerfile
+├── Jenkinsfile
 └── README.md
 ```
 
