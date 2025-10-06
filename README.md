@@ -22,20 +22,16 @@ of SauceDemo website. Reporting is implemented using Mochawesome reporter.
    ```bash
    cd saucelabs-cypress
    ```
-3. Install cypress:
+3. Build the Docker image:
    ```bash
-   npm install cypress --save-dev
+   docker build -t saucelabs-cypress .  
    ```
-4. Install cypress-xpath for certain selectors:
+3. Run the tests:
    ```bash
-   npm install -D cypress-xpath
-   ```
-5Install mochawesome-reporter for elegant reporting:
-   ```bash
-   npm i --save-dev cypress-mochawesome-reporter
+   docker run --rm -v $PWD/cypress/reports:/app/cypress/reports saucelabs-cypress
    ```
 
-
+Report can be seen at cypress/reports/index.html
 
    
 ## Project Structure
@@ -53,6 +49,8 @@ cypress-project/
 ├── cypress.config.js
 ├── package.json
 ├── package-lock.json
+├── DockerFile
+├── JenkinsFile
 └── README.md
 ```
 
@@ -65,19 +63,6 @@ cypress-project/
         - **`pages/`**: Page classes containing selectors and methods.
 - **`cypress.config.js`**: Cypress configuration file, also contains environment variables.
 - **`package.json`**: Node.js package configuration file.
-
-## Running Tests
-
-### Local Execution
-Run all tests in headless mode:
-```bash
-npx cypress run
-```
-
-Open Cypress UI:
-```bash
-npx cypress open
-```
 
 ## Additional Information
 
